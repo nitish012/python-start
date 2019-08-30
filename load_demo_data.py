@@ -37,7 +37,6 @@ def add_teacher(fname,lname,sub,role):
 def add_subject(sub,marks):
     s = Subject.objects.get_or_create(subject_name=sub, marks=marks)[0] 
     s.save()
-    print("________________________",type(s))
     return s    
 def add_department(teacher,branch):
     return Department.objects.get_or_create(head=teacher, branch_name=branch)[0]
